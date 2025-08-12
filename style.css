@@ -30,7 +30,7 @@ header {
 .logo {
   font-size: 2em;
   color: #fff;
-  user-select: none;  /*드래그방지*/
+  user-select: none;
 }
 
 .navigation a {
