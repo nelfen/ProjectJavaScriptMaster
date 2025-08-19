@@ -1,0 +1,29 @@
+.wrapper에 width값과 height값을 주기 전 wrapper의 값은 안에 있는 요소들 중에 가장 긴 width과 요소들의 height값을 전부 합친 값을 가지고있었어 이런 이유가 있을까?
+
+.wrapper .form-box를 왜쓴거야? .form-box만 써도 되지 않아?
+
+form-box login 왜 클래스 이름을 이렇게 썼는가?
+
+.wrapper .form-box에 width: 100%를 하니까 갑자기 안에 있는 태그들이 다시 좌측정렬 됐어 왜 그런거야?
+
+.wrapper .form-box에 padding: 40px을 주니 크기는 그대로에 상하좌우로 40px정도의 공간이 생겼어 난 아직도 border과 margin에 대해 잘 모르겠는데 이걸 b나 m으로 40px 준거랑 무슨차이가 있고 왜 margin으로 주게 된거야?
+
+.input-box의 margin값을 30px과 0으로 위아래로 주니 Email의 아랫부분, Password의 윗부분이 겹치는데 이 부분은 30 + 30 = 60이 아니라 둘다 그냥 30으로 남겨두게 됐어 설명이 궁금해
+
+.input-box label에 absolute 값을 넣었을때 화면에서 생기는 변화는 Email과 Password라는 글자가 input창 옆에 바짝 붙었어 내가알기론 absolute는 relative가 부여된 부모를 기준으로 잡고 css 하겠다는 걸로 알고있는데 뭔가 부연 설명이 필요해
+
+top코드에 대한 질문
+left: 5px에 대한 질문
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+} input-box 기준 몇칸 내려앉은거 질문
+
+
+  outline: none; 텍스트에서 썼을때와 버튼
+  right에 대해서 margin과 padding등 질문
+
+  .input-box .icon에 position: absolute;값을 주니 Email과 password를 쓸 input박스가 원래는 그어놓은 선 밑에서 써졌는데 그 값을 주고나니 어색하지 않은 위치로 바뀌었어 내 예상컨데 원래는 icon이 차지하던 자리가 생기니 텍스트창도 같이 올라간 느낌인데 내예상이 맞다고 해도 알고 넘어가는거랑 모르고 넘어가는건 큰 차이가 있다보니 어떻게든 질문하고 넘어가는게 맞을거같아서 그리고 이 코드의 경우 대부분은 내가 말한 순서대로 흘러가는데 그렇다는건 icon에 absolute 값을 줬을때 다 맞아떨어지게 설계했다는거잖아 그렇다면 코딩방식에 대해서도 궁금해
+
+  display: flex또한 코드가 붙음
