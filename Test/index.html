@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css 실습</title>
+<style>
+  .tag {color: gray;}
+  h2 {color: pink;}
+  .red {color: red;}
+  #green {color: green;}
+  p.special {color: blue;}
+  h2:first-child {color: orange;}
+  p:nth-child(2) {color: black};
+  p:nth-child(6) {color: aqua};
+</style>
+</head>
+<body>
+  <div class="tag">
+    <h2>h2태그</h2>
+    <p id="green">id값이 green으로 설정된 p태그</p>
+    <p class="special">class값이 special로 설정된 p태그</p>
+    <h3 class="red">class값이 red로 설정된 h3태그</h3>
+    <p class="special" style="color: purple;">class값이 special로 설정된 p태그</p>
+    <p>아무 설정값이 없는 p태그</p>
+  </div>
+</body>
+</html>
