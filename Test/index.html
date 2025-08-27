@@ -7,7 +7,18 @@
 </head>
 <body>
 <script>
+  const weeklyReadingList = [
+  ['자바스크립트 입문', 'HTML 마스터', 'CSS 레이아웃'],
+  ['프론트엔드 면접', '웹 보안 입문', '알고리즘 기초'],
+  ['Git 사용법', '리액트 기초', '비동기 처리'],
+  ['Next.js 개념', 'TypeScript 시작', '상태관리 패턴'],
+];
 
+for(i=1; i<=4; i++) {
+  for(j=1; j<=3; j++) {
+    console.log(i, "주차", j, "일차 책 :", weeklyReadingList[i-1][j-1]);
+  }
+}
 </script>
 </body>
 </html>
