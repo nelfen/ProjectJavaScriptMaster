@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js 실습</title>
+</head>
+<body>
+<script>
+const newCustomers = [];
+
+// 고객 목록
+const customerList = [
+  '신규 - 오콘솔',
+  '기존 - 이코딩',
+  '신규 - 이수열',
+  '기존 - 박오즈',
+  '신규 - 최열심',
+  '기존 - 신정열',
+];
+
+for (i=0; i<customerList.length; i++) {
+  if (customerList[i].includes('신규') === true) {
+    newCustomers.push(customerList[i]);
+  }
+}
+
+
+// 여기에 코드를 작성해주세요.
+
+console.log(newCustomers);
+
+</script>
+</body>
+</html>
