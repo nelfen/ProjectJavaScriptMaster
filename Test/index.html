@@ -3,26 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>반응형 웹</title>
+  <title>js 과제</title>
 </head>
-<style>
-  @media screen and (max-width: 1500px) {
-    img {
-      width: 1200px;
-    }
-  }
-    @media screen and (max-width: 1200px) {
-    img {
-      width: 900px;
-    }
-  }
-      @media screen and (max-width: 900px) {
-    img {
-      width: 600px;
-    }
-  }
-</style>
 <body>
-    <img src="background.jpg" alt="">
+
 </body>
+<script>
+  const cordination = [];
+
+  // 옷장
+  const wardrobe = [
+    ['반팔', '후드티', '셔츠'],
+    ['슬랙스', '청바지', '테니스치마'],
+    ['구두', '단화', '스니커즈'],
+  ];
+
+  // 여기에 코드를 작성해주세요.
+
+  for(i=0; i<wardrobe.length; i++) {
+    for(j=0; j<wardrobe.length; j++) {
+      for(k=0; k<wardrobe.length; k++) {
+        cordination.push([wardrobe[0][i], wardrobe[1][j], wardrobe[2][k]])
+      }
+    }
+  }
+
+
+  console.log(cordination);
+</script>
 </html>

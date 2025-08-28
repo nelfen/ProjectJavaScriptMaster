@@ -3,54 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="talk.css">
-  <link rel="stylesheet" href="text.css">
-  <title>채팅방 만들기</title>
+  <title>js 예제</title>
 </head>
 <body>
-  <div class="container">
-    <main class="chat-screen">
-      <section class="chat-screen_bar">
-        <div class="user">
-          <div class="user_column">
-            <div class="user_pic"></div>
-          </div>
-          <div class="user_column">
-            <p class="user_nick">친구</p>
-            <p class="user_count">2</p>
-          </div>
-        </div>
-      </section>
-      <ul class="chat-screen_texts">
-        <li class="text">오랜만이다</li>
-        <li class="text">잘지내?</li>
-        <li class="text">밥은 잘 먹고 다니고?</li>
-        <li class="text">우리 마지막으로 만난게 언제였더라</li>
-        <li class="text">대충 overflow를 발생시키기 위해 만든 챗</li>
-        <li class="text">대충 overflow를 발생시키기 위해 만든 챗</li>
-        <li class="text">대충 overflow를 발생시키기 위해 만든 챗</li>
-        <li class="text">대충 overflow를 발생시키기 위해 만든 챗</li>
-        <li class="text">대충 overflow를 발생시키기 위해 만든 챗</li>
-        <li class="text">대충 overflow를 발생시키기 위해 만든 챗</li>
-        <li class="text">대충 overflow를 발생시키기 위해 만든 챗</li>
-        <li class="text">대충 overflow를 발생시키기 위해 만든 챗</li>
-        <li class="text">대충 overflow를 발생시키기 위해 만든 챗</li>
-        <li class="text">대충 overflow를 발생시키기 위해 만든 챗</li>
-        <li class="text">대충 overflow를 발생시키기 위해 만든 챗</li>
-        <li class="text">대충 overflow를 발생시키기 위해 만든 챗</li>
-        <li class="text">대충 overflow를 발생시키기 위해 만든 챗</li>
-        <li class="text">대충 overflow를 발생시키기 위해 만든 챗</li>
-      </ul>
-    </main>
-    <form action="" class="chat-form">
-      <section class="chat-form_field">
-        <textarea name="" id="" class="chat-from_msg"></textarea>
-        <input type="submit" value="전송" class="chat-form_bt">
-      </section>
-    </form>
-  </div>
   <script>
+    let result = 0;
 
+    function countCoffe(lunch) {
+      money = 96000;
+      result = Math.floor((money - lunch) / 1800);
+
+      return result;
+    }
+
+  countCoffe(40000);
+  console.log(result);
   </script>
 </body>
 </html>
