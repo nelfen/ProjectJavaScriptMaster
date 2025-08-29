@@ -7,17 +7,44 @@
 </head>
 <body>
   <script>
-    let result = 0;
+     const queue = {};
+     let front = 0;
+     let rear = 0;
 
-    function countCoffe(lunch) {
-      money = 96000;
-      result = Math.floor((money - lunch) / 1800);
-
-      return result;
+    // 데이터 추가 (Enqueue)
+    function enqueue(data) {
+      queue[rear] = data;
+      rear++
     }
 
-  countCoffe(40000);
-  console.log(result);
+    // 데이터 제거 (Dequeue)
+    function dequeue() {
+      if (front === rear) {
+        console.log("삭제할 데이터가 없습니다")
+      } else {
+        let frontValue = front;
+        delete queue[front];
+        front++;
+        return frontValue;
+      }
+    }
+
+    // 가장 앞 데이터 확인 (Peek)
+    function peek() {
+      if(queue === null) {
+        console.log("저장된 데이터가 없습니다");
+      } else {
+        console.log(`${queue[front]}`)
+      }
+
+    }
+
+    // 큐가 비어있는지 확인 (IsEmpty)
+    function isEmpty() {
+      if(front === rear) {
+        console.log("저장된 데이터가 없습니다");
+      }
+    }
   </script>
 </body>
 </html>
