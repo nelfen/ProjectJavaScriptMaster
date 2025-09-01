@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>윤년 구하기</title>
+</head>
+<body>
+  <script>
+/*
+  3일차 과제: 윤년 구하기
+  목표: 연도가 윤년인지 판별하기
+  주제: 조건문을 활용한 윤년 구하기
+  요구사항
+  윤년이 입력된 경우: `(연도)년은 윤년입니다.`
+  윤년이 아닌 경우: `(연도)년은 윤년이 아닙니다.`
+  복습할 개념
+   - 조건문
+*/
+  let year = 2002;
+  if (year%400 === 0) {
+    console.log(`${year}년은 윤년입니다`);
+  } else if (year%100 === 0) {
+    console.log(`${year}년은 윤년이 아닙니다`);
+  } else if (year%4 === 0) {
+    console.log(`${year}년은 윤년입니다`)
+  } else {
+    console.log(`${year}년은 윤년이 아닙니다`);
+  }
+
+  </script>
+</body>
+</html>
