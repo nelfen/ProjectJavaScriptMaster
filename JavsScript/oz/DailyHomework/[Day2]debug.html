@@ -8,15 +8,30 @@
 <body>
   <script>
 /*
-  2일차 과제: 보물상자 열기
-  목표 : console.log 사용하여 출력하기
-  주제 : 변수 할당 값을 변경하며 원하는 타입을 출력하기
-  요구사항 : 보물 상자를 열기 위해 주어진 변수에 할당되는 값을 변경하여 보기와 같은 내용을 출력
+  2일차 과제: 오류 해결하기
+  목표: 코드를 수정하여 오류 해결하기
+  주제: 코드 수정을 통한 오류 해결
+  요구사항: 오류 의심 코드를 수정하여 원하는 출력을 도출해주세요
   복습할 개념
+   - string 타입 변환
    - console.log
-   - let
-   - typeof
+   - 템플릿 리터럴(`)
+   - number 타입의 사칙연산
 */    
+  const memberName = 'Jane';
+  const grade = 'gold';
+  const points = '32000';
+
+  const gradeLabel = grade.toUpperCase(); 
+  // 대문자로 만드는 코드
+  const bonusRate = 0.1;
+
+  const bonusPoints = Math.floor(points * bonusRate);
+
+  console.log(`${memberName}님의 등급: ${gradeLabel}`);
+  console.log('보너스 포인트:', bonusPoints + 'P');
+  //console.log('총 보유 포인트:', points + bonusPoints + 'P');
+  console.log('총 보유 포인트:', parseInt(points) + parseInt(bonusPoints) + 'P');
   </script>
 </body>
 </html>
