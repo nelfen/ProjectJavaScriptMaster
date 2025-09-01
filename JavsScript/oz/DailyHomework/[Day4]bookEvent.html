@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주간 독서 이벤트 준비</title>
+</head>
+<body>
+  <script>
+/*
+  4일차 과제: 주간 독서 이벤트 준비
+  목표: 중첩 반복문을 사용하여 2차원 배열을 순회하며 독서 기록 출력하기
+  주제: 중첩 반복문을 이용한 2차원 배열순회하기
+  요구사항: 주어진 중첩 배열을 순회하며주차별 독서 목록을 출력해주세요
+  복습할 개념
+  - 배열
+  - 반복문
+  - 중첩 반복문(2차원 배열 순회)
+*/    
+  const weeklyReadingList = [
+    ['자바스크립트 입문', 'HTML 마스터', 'CSS   레이아웃'],
+    ['프론트엔드 면접', '웹 보안 입문', '알고리즘 기초'],
+    ['Git 사용법', '리액트 기초', '비동기 처리'],
+    ['Next.js 개념', 'TypeScript 시작',   '상태관리 패턴'],
+  ];
+
+  for (i=0; i<weeklyReadingList.length; i++) {
+    for(j=0; j<weeklyReadingList[i].length; j++) {
+      console.log(`${i+1}주차 ${j+1}일차 책: ${weeklyReadingList[i][j]}`);
+    }
+  }
+  </script>
+</body>
+</html>
