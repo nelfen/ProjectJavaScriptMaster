@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배달 주문하기</title>
+</head>
+<body>
+  <script>
+/*
+  3일차 과제: 수열 계산하기
+  목표: 메뉴 선택 시 메뉴와 가격을 콘솔에 출력
+  주제: 조건문을 활용한 출력
+  요구사항: 메뉴 변수에 메뉴 명에 맞게 메뉴와 가격을 출력합니다.
+  복습할 개념
+   - 조건문
+   - 템플릿 리터럴(`)
+*/      
+  let menu = '떡볶이';
+  let priceText = '';
+
+  if(menu === '떡볶이') {
+    priceText = 15000;
+    console.log(`${menu}: ${priceText}원`);
+  } else if (menu === '김밥') {
+    priceText = 3000;
+    console.log(`${menu}: ${priceText}원`);
+  } else if (menu === '튀김') {
+    priceText = 2000;
+    console.log(`${menu}: ${priceText}원`);
+  } else if (menu === '우동') {
+    priceText = 7500;
+    console.log(`${menu}: ${priceText}원`);
+  } else {
+    console.log("없는 메뉴입니다.")
+  }
+
+  </script>
+</body>
+</html>
