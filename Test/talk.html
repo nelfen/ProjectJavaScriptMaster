@@ -14,27 +14,28 @@
     // 데이터 추가 (Enqueue)
     function enqueue(data) {
       queue[rear] = data;
-      rear++
+      rear++;
     }
 
     // 데이터 제거 (Dequeue)
     function dequeue() {
       if (front === rear) {
         console.log("삭제할 데이터가 없습니다")
+        return;
       } else {
-        let frontValue = front;
+        let frontValue = queue[front];
         delete queue[front];
         front++;
-        return frontValue;
+        console.log(`${frontValue}가(이) 삭제되었습니다`)
       }
     }
 
     // 가장 앞 데이터 확인 (Peek)
     function peek() {
-      if(queue === null) {
+      if(front === rear) {
         console.log("저장된 데이터가 없습니다");
       } else {
-        console.log(`${queue[front]}`)
+        console.log(`가장앞에 있는 index의 번호는 ${queue[front]}입니다`)
       }
 
     }
@@ -43,8 +44,26 @@
     function isEmpty() {
       if(front === rear) {
         console.log("저장된 데이터가 없습니다");
+        return true;
+      } else {
+        console.log(`${rear - front}개의 데이터가 있습니다`);
+        return false;
       }
     }
+
+    enqueue("사과");
+    enqueue("포도");
+    enqueue("딸기");
+    dequeue();
+    console.log(queue);
+    peek();
+    isEmpty();
+    enqueue("레몬");
+    enqueue("망고");
+    dequeue();
+    console.log(queue);
+    
+    
   </script>
 </body>
 </html>
