@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주사위 굴리기</title>
+</head>
+<body>
+  <script>
+/*
+  2일차 과제: 주사위 굴리기
+  목표: 랜덤 주사위 숫자를 사용하여 이미지 뽑아내기
+  주제: 랜덤 주사위 숫자 만들기
+  요구사항: Math 함수를 활용하여 1~6까지 랜덤 주사위 숫자를 만들어주세요.
+  복습할 개념
+   - Math 객체
+   - Number
+   - Math.random()
+   - Math.floor()
+*/   
+  let dice = Math.floor(Math.random()*6+1);
+
+  const diceArt = [
+  '0인 경우는 제외해주세요.',
+  `
+  ┌─────┐
+  │     │
+  │  ●  │
+  │     │
+  └─────┘
+  `,
+  `
+  ┌─────┐
+  │ ●   │
+  │     │
+  │   ● │
+  └─────┘
+  `,
+  `
+  ┌─────┐
+  │ ●   │
+  │  ●  │
+  │   ● │
+  └─────┘
+  `,
+  `
+  ┌─────┐
+  │ ● ● │
+  │     │
+  │ ● ● │
+  └─────┘
+  `,
+  `
+  ┌─────┐
+  │ ● ● │
+  │  ●  │
+  │ ● ● │
+  └─────┘
+  `,
+  `
+  ┌─────┐
+  │ ● ● │
+  │ ● ● │
+  │ ● ● │
+  └─────┘
+  `,
+];
+
+console.log(diceArt[dice]);
+  </script>
+</body>
+</html>
