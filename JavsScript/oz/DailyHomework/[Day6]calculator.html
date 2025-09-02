@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>계산기 만들기</title>
+</head>
+<body>
+  <script>
+/*
+  6일차 과제: 계산기 만들기
+  목표/주제: 객체를 내부 값을 변경하는 사칙연산이 가능한 계산기 만들기
+  요구사항: 사칙연산이 가능한 계산기 함수(calculator)를 만들어주세요.
+  복습할 개념
+   - Number
+   - 객체 프로퍼티
+   - 함수
+*/    
+  const calculateData = {
+    view: 0,
+    history: 0,
+  };
+
+  function calculator(num1, num2, operator) {
+    switch(operator) {
+      case '+':
+        calculateData.view = num1 + num2;
+        break;
+      case '-':
+        calculateData.view = num1 - num2;
+        break;
+      case '*':
+        calculateData.view = num1 * num2;
+        break;
+      case '/':
+        calculateData.view = num2 === 0 ? 0 : num1 / num2;
+        break;
+      default:
+        console.log("지원하지 않는 형식입니다")
+    }
+    console.log(`view is ${calculateData.view}, history is ${calculateData.history}`);
+    calculateData.history = calculateData.view;
+  }
+  calculator(1, 2, '+');
+  calculator(2, 1, '-');
+  calculator(2, 2, '*');
+  calculator(2, 2, '/');
+  </script>
+</body>
+</html>
