@@ -7,6 +7,18 @@
 </head>
 <body>
   <script>
+/*
+  5일차 과제: 주사위 굴리기2
+  목표: 랜덤 주사위 숫자를 사용하여 이미지 뽑아내는 함수 만들기
+  주제: 랜덤 주사위 숫자를 내는 함수 만들기
+  요구사항: Math 함수를 활용하여 랜덤 주사위 함수를 만들어주세요.
+  복습할 개념
+   - Math 객체
+   - Number
+   - Math.random()
+   - Math.floor()
+   - 함수
+*/    
     const diceArt = [
   '0인 경우는 제외해주세요.',
   `
@@ -52,12 +64,12 @@
   └─────┘
   `,
 ];
-    function Dice() {
-      let rollingDice = Math.floor(Math.random()*6+1);
-      console.log(diceArt[rollingDice]);
-    }
+  function Dice() {
+    let rollingDice = Math.floor(Math.random()*6+1);
+    console.log(diceArt[rollingDice]);
+  }
 
-    Dice();
+  Dice();
   </script>
 </body>
 </html>
