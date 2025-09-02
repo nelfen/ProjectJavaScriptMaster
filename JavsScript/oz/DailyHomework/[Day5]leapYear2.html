@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>윤년 구하기2</title>
+</head>
+<body>
+  <script>
+/*
+  5일차 과제: 윤년 구하기2
+  목표: 연도를 매개변수로 받아 윤년인지 판별하는 함수 만들기
+  주제: 조건문을 활용한 윤년 판별 함수 만들기
+  요구사항: 연도를 매개변수로 받아 윤년인지 판별하는 함수를 만들어주세요.
+   - 조건문
+   - 함수
+*/        
+  function leapYear(year) {
+    if(year%400 === 0) {
+      console.log(`${year}은 윤년입니다`);
+    } else if(year%100 === 0) {
+      console.log(`${year}은 윤년이 아닙니다`);
+    } else if(year%4 === 0) {
+      console.log(`${year}은 윤년입니다`);
+    } else {
+      console.log(`${year}은 윤년이 아닙니다`);
+    }
+  }
+  leapYear(2000);
+  leapYear(2100);
+  leapYear(2004);
+  leapYear(2003);
+  leapYear(2008);
+
+  </script>
+</body>
+</html>
