@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주사위 굴리기2</title>
+</head>
+<body>
+  <script>
+    const diceArt = [
+  '0인 경우는 제외해주세요.',
+  `
+  ┌─────┐
+  │     │
+  │  ●  │
+  │     │
+  └─────┘
+  `,
+  `
+  ┌─────┐
+  │ ●   │
+  │     │
+  │   ● │
+  └─────┘
+  `,
+  `
+  ┌─────┐
+  │ ●   │
+  │  ●  │
+  │   ● │
+  └─────┘
+  `,
+  `
+  ┌─────┐
+  │ ● ● │
+  │     │
+  │ ● ● │
+  └─────┘
+  `,
+  `
+  ┌─────┐
+  │ ● ● │
+  │  ●  │
+  │ ● ● │
+  └─────┘
+  `,
+  `
+  ┌─────┐
+  │ ● ● │
+  │ ● ● │
+  │ ● ● │
+  └─────┘
+  `,
+];
+    function Dice() {
+      let rollingDice = Math.floor(Math.random()*6+1);
+      console.log(diceArt[rollingDice]);
+    }
+
+    Dice();
+  </script>
+</body>
+</html>
