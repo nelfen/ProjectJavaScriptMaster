@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>할 일 목록 관리하기</title>
+</head>
+<body>
+  <script>
+/*
+  6일차 과제: 할 일 목록 관리하기
+  목표: 나만의 할 일 목록 만들기
+  주제: 할 일 목록 객체 관리하기
+  요구사항: 함수를 활용하여 할 일 목록 관리 함수를 만듭니다
+  복습할 개념
+   - 객체 프로퍼티
+   - 함수
+*/       
+
+  const todos = {};
+  let todoId = 0;
+  
+  function addTodo(doing) {
+    const newTodo = {
+      todo: doing,
+      finished: false,
+    }
+    todos[todoId] = newTodo;
+    todoId++;
+  }
+  
+  function deleteTodo(PropertyKey) {
+    delete todos[PropertyKey];
+  }
+
+  function finishTodo(isFinished) {
+    todos[isFinished].finished = true;
+  }
+
+  addTodo("운동하기");
+  addTodo("청소하기");
+  addTodo("예습하기");
+  addTodo("복습하기");
+  deleteTodo(0);
+  addTodo("책읽기");
+  console.log(todos);
+  finishTodo(2);
+  console.log(todos[2]);
+  console.log(todos);
+  </script>
+</body>
+</html>
