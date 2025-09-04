@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오류 해결하기 2</title>
+</head>
+<body>
+  <script>
+  const studentPrinters = [];
+
+  for (let i = 0; i < 5; i++) {
+    studentPrinters.push(function () {
+      console.log('학생 번호:', 1001 + i);
+    });
+  }
+
+  studentPrinters[0]();
+  studentPrinters[1]();
+  studentPrinters[2]();
+  studentPrinters[3]();
+  studentPrinters[4]();
+  </script>
+</body>
+</html>
