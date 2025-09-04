@@ -7,45 +7,53 @@
 </head>
 <body>
   <script>
-// 새로 들어오는 직원이 받을 id
-let newStaffId = 1004;
+/*
+  7일차 과제: 직원 관리하기
+  목표: 기존 직원 명단에 새로운 직원을 넣은 새로운 명단 반환하기
+  주제: 기존 객체를 복사한 후, 새로운 프로퍼티를 삽입 후 새로운 객체로 만들기
+  요구사항: 새로운 직원이 들어오면 직원ID를 이전 번호에 이어서 추가하며, 새로운 객체로 반환하여 staffList에 저장하는 함수(addNewStaff)를 만들어야 합니다
+  복습할 개념
+   - spread 문법
+   - 객체 복사
+   - 함수
+*/
+  // 새로 들어오는 직원이 받을 id
+  let newStaffId = 1004;
 
-let staffList = {
-  1000: { name: '최오즈', age: '42', phoneNumber: '010-2244-7462' },
-  1001: { name: '이코딩', age: '29', phoneNumber: '010-2290-0292' },
-  1002: { name: '이수열', age: '24', phoneNumber: '010-1248-1632' },
-  1003: { name: '오콘솔', age: '24', phoneNumber: '010-3122-2203' },
-};
+  let staffList = {
+    1000: { name: '최오즈', age: '42', phoneNumber: '010-2244-7462' },
+    1001: { name: '이코딩', age: '29', phoneNumber: '010-2290-0292' },
+    1002: { name: '이수열', age: '24', phoneNumber: '010-1248-1632' },
+    1003: { name: '오콘솔', age: '24', phoneNumber: '010-3122-2203' },
+  };
 
-// 새로 들어올 10명의 직원 정보
-const newStaff = [
-  { name: '오로그', age: '24', phoneNumber: '010-3122-2203' },
-  { name: '김개발', age: '27', phoneNumber: '010-4721-1830' },
-  { name: '이자스', age: '22', phoneNumber: '010-8354-6722' },
-  { name: '박코딩', age: '25', phoneNumber: '010-9243-1567' },
-  { name: '정디버그', age: '29', phoneNumber: '010-2417-8831' },
-  { name: '최함수', age: '23', phoneNumber: '010-3820-4502' },
-  { name: '한프론트', age: '26', phoneNumber: '010-9432-9120' },
-  { name: '노자바', age: '21', phoneNumber: '010-6482-3305' },
-  { name: '유인덱스', age: '28', phoneNumber: '010-5117-7614' },
-  { name: '문서열', age: '24', phoneNumber: '010-1032-2841' },
-];
+  // 새로 들어올 10명의 직원 정보
+  const newStaff = [
+    { name: '오로그', age: '24', phoneNumber: '010-3122-2203' },
+    { name: '김개발', age: '27', phoneNumber: '010-4721-1830' },
+    { name: '이자스', age: '22', phoneNumber: '010-8354-6722' },
+    { name: '박코딩', age: '25', phoneNumber: '010-9243-1567' },
+    { name: '정디버그', age: '29', phoneNumber: '010-2417-8831' },
+    { name: '최함수', age: '23', phoneNumber: '010-3820-4502' },
+    { name: '한프론트', age: '26', phoneNumber: '010-9432-9120' },
+    { name: '노자바', age: '21', phoneNumber: '010-6482-3305' },
+    { name: '유인덱스', age: '28', phoneNumber: '010-5117-7614' },
+    { name: '문서열', age: '24', phoneNumber: '010-1032-2841' },
+  ];
 
-function addNewStaff(newStaff) {
-  let newStaffList = { ...staffList };
-  for (let i = 0; i < newStaff.length; i++) {
-    newStaffList = {
-      ...newStaffList,
-      [newStaffId]: newStaff[i],
-    };
-    newStaffId++;
+  function addNewStaff() {
+    let newStaffList = { ...staffList };
+    for(i=0; i<newStaff.length; i++) {      
+        newStaffList[newStaffId] = newStaff[i];
+        newStaffId++;
+    }
+    return newStaffList;
   }
-  return newStaffList;
-}
 
-let lastStaffList = addNewStaff(newStaff);
+  result = new addNewStaff();
 
-console.log(lastStaffList);
+  console.log(result);
+
   </script>
 </body>
 </html>
