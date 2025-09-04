@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마왕 물리치기</title>
+</head>
+<body>
+  <script>
+/*
+  7일차 과제: 마왕 물리치기
+  목표: 마왕의 공격을 피해 마왕의 HP 줄여나가기
+  주제: 마왕 공격 배열을 탐색하며 공격이 없을 때 마왕을 공격하여 마왕을 쓰러뜨리기
+  요구사항
+   - `reduce()` 함수를 사용하여 해결해주세요.
+   - `pattern`은 마왕의 공격 패턴을 담은 배열입니다.
+     - 마왕의 공격 패턴이 `[공격]`이라는 문자열이 포함된 경우, 방어를 해야하기에 마왕을 공격할 수 없습니다
+     - 마왕의 공격 패턴이 `0`일 경우, 마왕을 공격할 수 있습니다.
+   - 마왕을 공격할 때는, 박오즈가 주사위를 굴려 공격합니다. 주사위는 `10, 20, 30, 40, 50, 60` 중 랜덤하게 나오며, 주사위 숫자에 맞춰 마왕을 공격할 수 있습니다.
+   - 마왕의 체력(`LuciferHP`)은 100입니다.
+   - 모든 패턴을 순회할 때, 박오즈가 마왕을 쓰러뜨렸는지 확인하는 문자열을 출력해주세요.
+     - 마왕이 쓰러졌을 때: `‘박오즈는 강했다.’`
+     - 마왕을 쓰러뜨리지 못했을 때: `‘박오즈는 보물에 생을 바쳤다.’`
+  복습할 개념
+   - 배열 메서드
+   - 배열
+   - 함수
+   - number 타입
+   - Math.random()
+   - 조건문
+   - 반복문
+   - Array.prototype.reduce()
+*/
+  const dice = [10, 20, 30, 40, 50, 60];
+
+  const pattern = [
+    '[공격] 뿔 찌르기',
+    '[공격] 박치기',
+    0,
+    '[공격] 불 뿜기',
+    0,
+    '[공격] 꼬리 휘두르기',
+    0,
+  ]
+
+  let LuciferHP = 100;
+
+  let isLuciferAlive = true;
+
+  function getAttackDamage() {
+    let attack = Math.floor(Math.random()*6);;
+    return attack;
+  }
+
+  LuciferHP = pattern.reduce((totalHP, action) => {
+    let dmg = dice[getAttackDamage()];
+    action === 0 ? totalHP -= dmg : totalHP
+    console.log(totalHP);
+    if (totalHP <= 0) {
+      isLuciferAlive = false;
+    }
+    return totalHP;
+  }, 100
+);
+
+  if (isLuciferAlive) {
+    console.log("박오즈는 보물에 생을 바쳤다.");
+  } else {
+    console.log("박오즈는 강했다.");
+  }
+  
+  </script>
+</body>
+</html>
