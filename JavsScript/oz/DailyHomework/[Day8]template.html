@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>템플릿 만들기</title>
+</head>
+<body>
+  <script>
+/*
+  8일차 과제: 템플릿 만들기
+  목표: 신입 입사자 내역을 받아 구조분해할당을 통해 템플릿을 완성할 수 있다.
+  주제: 객체를 입력받아 구조분해할당으로 문자열을 반환하는 함수를 만들 수 있다
+  요구사항: 신입 객체를 함수의 매개변수로 받아올 때, 구조분해할당을 활용하여 템플릿을 만들어 반환하는 함수(createWelcomeMessage)를 작성해주세요
+  복습할 개념
+   - 구조분해할당
+   - 템플릿 리터럴
+   - 함수
+   - 문자열
+   - string
+*/ 
+
+  const newEmployee = {
+    name: '정디버그',
+    position: '주니어 프론트엔드 개발자',
+    department: '기술개발실',
+    contact: {
+      email: 'debug@example.com',
+      phone: '010-1234-5678',
+    },
+    mentor: {
+      name: '김개발',
+      position: '시니어 프론트엔드 개발자',
+      contact: {
+        email: 'dev@example.com',
+        phone: '010-4242-8811',
+      },
+    },
+  };
+  
+  const createWelcomeMessage = ({}) => {
+       console.log(`
+       [Welcome, ${newEmployee.name}님 👋]
+       
+       ${newEmployee.department}의 ${newEmployee.position}로 입사하신 것을 진심으로 환영합니다!
+
+       문의 사항이 있을 경우, 멘토 ${newEmployee.mentor.name}(${newEmployee.mentor.position})에게 편하게 연락 주세요
+       
+      📧 이메일: ${newEmployee.mentor.contact.email}
+      📱 연락처: ${newEmployee.mentor.contact.phone}
+       `);
+  };
+
+  console.log(createWelcomeMessage(newEmployee));
+  </script>
+</body>
+</html>
