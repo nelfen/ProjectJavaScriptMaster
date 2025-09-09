@@ -16,36 +16,38 @@
       </div>
       <div class="display">
         <p>1</p>
+        <!-- p태그는 어차피 js를 통해 버튼을 누르면 입력 받게 되겠지만 테스트를 위해 1 써놓음-->
       </div>
       <div class="buttons">
-        <div class="firstLine">
-          <div class="reset"><button>C</button></div>
-          <div class="pm"><button>±</button></div>
-          <div class="per"><button>%</button></div>
-          <div class="half"><button>/</button></div>
+        <!-- .buttons > div 이런식으로 스타일을 줄거라면 0이 포함된 마지막줄 말고 굳이 firstLine과 같은 class가 필요한가? + 요구사항에 button에 class 넣으래요 -->
+        <div>
+          <div><button class="function">C</button></div>
+          <div><button class="function">±</button></div>
+          <div><button class="function">%</button></div>
+          <div><button class="operator">/</button></div>
         </div>
-        <div class="secondLine">
-          <div class="seven"><button class="number">7</button></div>
-          <div class="eight"><button class="number">8</button></div>
-          <div class="nine"><button class="number">9</button></div>
-          <div class="mult"><button>*</button></div>
+        <div>
+          <div><button class="number">7</button></div>
+          <div><button class="number">8</button></div>
+          <div><button class="number">9</button></div>
+          <div><button class="operator">*</button></div>
         </div>
-        <div class="thirdLine">
-          <div class="four"><button class="number">4</button></div>
-          <div class="five"><button class="number">5</button></div>
-          <div class="six"><button class="number">6</button></div>
-          <div class="minus"><button>-</button></div>
+        <div>
+          <div><button class="number">4</button></div>
+          <div><button class="number">5</button></div>
+          <div><button class="number">6</button></div>
+          <div><button class="operator">-</button></div>
         </div>
-        <div class="fourthLine">
-          <div class="one"><button class="number">1</button></div>
-          <div class="two"><button class="number">2</button></div>
-          <div class="three"><button class="number">3</button></div>
-          <div class="plus"><button>+</button></div>
+        <div>
+          <div><button class="number">1</button></div>
+          <div><button class="number">2</button></div>
+          <div><button class="number">3</button></div>
+          <div><button class="operator">+</button></div>
         </div>
         <div class="fifthLine">
-          <div class="zero"><button class="number">0</button></div>
-          <div class="dot"><button>.</button></div>
-          <div class="equal"><button>=</button></div>
+          <div><button class="number zero">0</button></div>
+          <div><button class="dot">.</button></div>
+          <div><button class="equal">=</button></div>
         </div>
       </div>
     </div>
