@@ -59,24 +59,14 @@ html, body {
   cursor: pointer;
 }
 
-.close {
-    background-color: #ff5f57;
-}
-
-.mini {
-    background-color: #ffbd2e;
-}
-
-.en {
-  background-color: #28ca41;
-}
+.close {background-color: #ff5f57;}
+.mini {background-color: #ffbd2e;}
+.en {background-color: #28ca41;}
 
 button { 
   width: 100%;
   height: 100%;
   border: none;
-  padding: 0;
-  margin: 0;   
   background: none;
   font-size: inherit;
   cursor: pointer;

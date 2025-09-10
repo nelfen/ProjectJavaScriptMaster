@@ -23,28 +23,26 @@ html, body {
   flex-direction: column;
 }
 
-/* 디스플레이 영역이 너무커서 일부 수정 */
 .display {
-  border: 2px solid black; /* 3px -> 2px */
-  flex-grow: 0.3; /* 1 -> 0.3 굳이 1정도로 클 필요가 없다 */
+  border: 2px solid black;
+  flex-grow: 0.3;
   margin: 10px;
-  display: flex;  /* 숫자 가운데 정렬 */
-  align-items: center;  /* default:row이기 때문에 숫자 가운데 배치*/
-  justify-content: flex-end;  /* 계산기이기 때문에 숫자 우측 배치 */
-  padding-right: 20px;  /* 숫자 벽에 너무 붙어있으면 어색하니 padding 20px */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
 }
 
-/* ui 개선을 위한 p 폰트 변경 */
 .display > p {
   font-size: 35px;
 }
 
 .buttons {
-  border: 1px solid black;  /* 3px -> 1px */
-  flex-grow: 4; /* 2 -> 4 display가 작아지는것 뿐만 아니라 얘 크기 자체도 키워서 ui 개선 */
+  border: 1px solid black;
+  flex-grow: 4;
   margin: 10px;
-  display: flex;  /* 얘 없으면 ㅇㅇLine에 flex-grow 못줌*/
-  flex-direction: column; /* 얘 없으면 ㅇㅇLine 세워짐 */
+  display: flex;
+  flex-direction: column;
 }
 
 .tools {
@@ -73,7 +71,6 @@ html, body {
   background-color: #28ca41;
 }
 
-/* div로 값을 넘겨줘도 되지만 button을 사용하라는 요구사항이 있기도 했고 button의 active가 값 넘기기 좋아서 div영역과 똑같은 버튼을 추가*/
 button { 
   width: 100%;
   height: 100%;
@@ -81,11 +78,10 @@ button {
   padding: 0;
   margin: 0;   
   background: none;
-  font-size: inherit; /* 폰트는 나중에 알아서 바꿀 예정 */
+  font-size: inherit;
   cursor: pointer;
 }
 
-/* 마우스 올려놨을때 바뀌는 값 */
 button:hover {
   background-color: black;
   color: white;
@@ -93,8 +89,8 @@ button:hover {
 
 .buttons > div {
   border: 1px 1px solid black;
-  flex-grow: 1;
   display: flex;
+  flex-grow: 1;
 }
 
 .buttons > div > div {

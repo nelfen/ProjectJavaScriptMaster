@@ -1,16 +1,14 @@
-const buttons = document.querySelectorAll(".button");
-const display = document.querySelector(".display p")
+//버튼배열에는 button 클래스가 들어간 버튼 19개가 들어가있다
+const 버튼배열 = document.querySelectorAll(".button");
+//p태그는 0으로 기본 설정 되어있는 상태이다
+const p태그 = document.querySelector(".display p")
 
-//buttons = 19개의 버튼을 포함하고있는 배열(이름은 내가 원하는걸로 설정 가능)
-//button = 배열 안에 있는 값(이름은 내가 원하는걸로 설정 가능)
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    //buttonValue = 계산기 버튼을 눌렀을때의 그 값
-    const buttonValue = button.textContent;
-    //currentDisplayValue = p태그 안에 들어있는 값
-    const currentDisplayValue = display.textContent;
+버튼배열.forEach(버튼배열요소 => {
+  버튼배열요소.addEventListener("click", () => {
+    const 버튼값 = 버튼배열요소.textContent;
+    const p태그값 = p태그.textContent;
 
-    switch (buttonValue) {
+    switch (버튼값) {
       case '0':
       case '1':
       case '2':
@@ -21,29 +19,11 @@ buttons.forEach(button => {
       case '7':
       case '8':
       case '9':
-        if (currentDisplayValue === '0') {
-          display.textContent = buttonValue;
+        if (p태그값 === '0') {
+          p태그.textContent = 버튼값;
+        } else {
+          p태그.textContent += 버튼값;
         }
     }
-
-
   });
 });
-
-
-
-
-
-
-
-function add1() {
-
-}
-
-const add2 = function() {
-
-}
-
-const add3 = () => {
-
-}
