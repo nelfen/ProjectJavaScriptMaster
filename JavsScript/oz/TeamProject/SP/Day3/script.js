@@ -7,6 +7,14 @@ buttons.forEach(button => {
     const currentDisplayValue = display.textContent;
 
     switch (buttonValue) {
+      case 'C':
+          display.textContent = '0';
+          break;
+      case '.':
+          if (!currentDisplayValue.includes('.')) {
+            display.textContent += '.';
+          }
+          break;
       case '0':
       case '1':
       case '2':
@@ -22,6 +30,10 @@ buttons.forEach(button => {
         } else {
           display.textContent += buttonValue;
         }
+        break;
+      default:
+        console.log(buttonValue);
+        break;
     }
   });
 });
