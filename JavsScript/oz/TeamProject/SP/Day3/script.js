@@ -4,7 +4,7 @@ const display = document.querySelector(".display p");
 buttons.forEach(button => {
   button.addEventListener("click", () => {
     const buttonValue = button.textContent;
-    const displayValue = display.textContent;
+    const currentDisplayValue = display.textContent;
 
     switch (buttonValue) {
       case '0':
@@ -17,7 +17,7 @@ buttons.forEach(button => {
       case '7':
       case '8':
       case '9':
-        if (displayValue === '0') {
+        if (currentDisplayValue === '0') {
           display.textContent = buttonValue;
         } else {
           display.textContent += buttonValue;
