@@ -1,5 +1,5 @@
 const buttons = document.querySelectorAll(".button");
-const display = document.querySelector(".display p")
+const display = document.querySelector(".display p");
 
 buttons.forEach(button => {
   button.addEventListener("click", () => {
@@ -11,7 +11,7 @@ buttons.forEach(button => {
           display.textContent = '0';
           break;
       case '.':
-          if(!currentDisplayValue.includes('.')) {
+          if (!currentDisplayValue.includes('.')) {
             display.textContent += '.';
           }
           break;

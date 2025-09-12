@@ -1,9 +1,12 @@
-const buttons = document.querySelectorAll(".button");
+const buttons = document.querySelectorAll("button");
 const display = document.querySelector(".display p")
+
 
 buttons.forEach(button => {
   button.addEventListener("click", () => {
+
     const buttonValue = button.textContent;
+
     const currentDisplayValue = display.textContent;
 
     switch (buttonValue) {
@@ -11,10 +14,10 @@ buttons.forEach(button => {
           display.textContent = '0';
           break;
       case '.':
-          if(!currentDisplayValue.includes('.')) {
-            display.textContent += '.';
-          }
-          break;
+    if (!currentDisplayValue.includes('.')) {
+      display.textContent += '.';
+    }
+    break;
       case '0':
       case '1':
       case '2':
@@ -30,9 +33,6 @@ buttons.forEach(button => {
         } else {
           display.textContent += buttonValue;
         }
-        break;
-      default:
-        console.log(buttonValue);
         break;
     }
   });

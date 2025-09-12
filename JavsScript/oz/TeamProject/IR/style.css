@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: boder-box;
+    box-sizing: border-box;
 }
 
 html, body{
@@ -13,11 +13,10 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
 }
 
 .main {
-    border: 3px solid green;
+    border: 3px solid;
     width: 400px;
     aspect-ratio: 1 / 1.5;
     display: flex;
@@ -25,34 +24,55 @@ html, body{
 }
 
 .display {
-    border: 3px solid red;
-    flex-grow: 1;
-    margin: 10px;
-    text-align: right;
+  border: 2px solid;
+  flex-grow: 0.3;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.display > p {
+  font-size: 35px;
 }
 
 .buttons {
-    border: 3px solid blue;
-    flex-grow: 4;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
+  border: 1px solid black;
+  flex-grow: 4;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
-button{
-    width: 100%;
-    height: 100%;
-    border: none;
-    padding: 0;
-    margin: 0;   
-    box-sizing: border-box;
-    background: none;
-    font-size: inherit;
-    cursor: pointer;
+.tools {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+}
+
+.tools > div {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close {background-color: rgb(237, 99, 99);}
+.reduce {background-color: rgb(238, 238, 127);}
+.enlarge{background-color: rgb(122, 239, 122);}
+
+button { 
+  border: none;
+  background: none;
+  font-size: inherit;
+  cursor: pointer;
 }
 
 button:hover {
-  background-color: gray;
+  background-color: black;
+  color: white;
 }
 
 button:active {
@@ -60,45 +80,16 @@ button:active {
   color: white;
 }
 
-.tools {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 10px;
+.buttons > div {
+  display: flex;
+  flex-grow: 1;
 }
 
-.tools > div {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.close {
-    background-color: rgb(237, 99, 99);
-}
-
-.reduce {
-    background-color: rgb(238, 238, 127);
-}
-
-.enlarge{
-    background-color: rgb(122, 239, 122);
-}
-
-.first, .second, .third, .fourth, .fifth{
-    border: 1px solid black;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: row;
-}
-
-.first > div,.second > div,.third > div,.fourth > div,.fifth > div{
-    border: 0.1px solid black;
-    display: flex;
-    width: 100%;
+.button {
+  border: 1px solid black;
+  width: 25%;
 }
 
 .zero {
-  flex: 0 0 50%;
+  flex-grow: 2;
 }
